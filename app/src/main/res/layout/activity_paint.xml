@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".PaintActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/white"
+        app:popupTheme="@style/AppTheme.AppBarOverlay">
+        </androidx.appcompat.widget.Toolbar>
+</com.google.android.material.appbar.AppBarLayout>
+
+    <com.example.coloringapp.Widget.PaintSurfaceView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/pain_view"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gris_light"
+        android:gravity="center">
+
+    <com.thebluealliance.spectrum.SpectrumPalette
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:spectrum_autoPadding="true"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        android:background="@color/white"
+        app:spectrum_outlineWidth="2dp"
+        app:spectrum_colors="@array/demo_colors"
+        android:id="@+id/palette"></com.thebluealliance.spectrum.SpectrumPalette>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_undo_24"
+        android:onClick="undoLastAction"
+        ></ImageButton>
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="100dp"
+            android:layout_margin="2dp"
+            android:background="@drawable/multi_color"
+            android:onClick="selectColor"
+            ></Button>
+
+</LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
